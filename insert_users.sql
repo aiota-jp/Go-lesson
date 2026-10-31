@@ -1,3 +1,14 @@
+CREATE DATABASE IF NOT EXISTS lesson CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE lesson;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(256) NOT NULL,
+    furigana VARCHAR(256) NOT NULL,
+    email VARCHAR(256) NOT NULL,
+    age INT(11),
+    address VARCHAR(256)
+) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 INSERT INTO users (name, furigana, email, age, address)
 VALUES
 ('氏家 愛梨', 'うじいえ あいり', 'ujie_airi@example.com', 42, '神奈川県'),
